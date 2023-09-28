@@ -8,9 +8,17 @@ import Perfil from '../components/screens/Perfil'
 import Publicaciones from '../components/screens/Publicaciones'
 import Seguimientos from '../components/screens/Seguimientos'
 import { useState } from 'react'
+import { useRouter } from "next/router";
 
 export default function Dashboard() {
   const [currentComponent, setCurrentComponent] = useState("Home")
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const router = useRouter();
+
+
+  const handlePageChange = (pageName: string) => {
+    setCurrentComponent(pageName);
+  };
 
   let componentToRender;
 
@@ -34,15 +42,58 @@ export default function Dashboard() {
       componentToRender = <Seguimientos />;
       break;
     default:
-      componentToRender = <Home />; // Renderiza Home por defecto si currentComponent no coincide con ninguna de las opciones anteriores
+      componentToRender = <Home />;  
       break;
   }
+  const handlePerfilClick = () => {
+    setCurrentComponent('Perfil')
+    setIsMenuOpen(false)
+  };
 
+  const handleMensajesClick = () => {
+    setCurrentComponent('Mensajes')
+    setIsMenuOpen(false)
+  };
+
+  const handlePublicacionesClick = () => {
+    setCurrentComponent('Publicaciones')
+    setIsMenuOpen(false)
+  };
+
+  const handleSeguimientosClick = () => {
+    setCurrentComponent("Seguimientos")
+    setIsMenuOpen(false)
+  };
+  const handleCerrarSesion = () => {
+    router.push('/');
+    setIsMenuOpen(false)
+  };
   return (
     <main className='h-screen bg-slate-50'>
-      <Navbar currentComponent={currentComponent} setCurrentComponent={setCurrentComponent} />
+        <Navbar currentComponent={currentComponent} setCurrentComponent={setCurrentComponent}
+          isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       {componentToRender}
       <Footer />
+      <div className={isMenuOpen ? 
+          'fixed top-0 right-0 flex flex-col text-gray-800 z-50 bg-white bg-opacity-90   mt-16 border border-gray-100' : 'hidden'}>
+          <ul className='flex flex-col text-lg text-gray-600 w-screen '>
+            <button className=' bg-white bg-opacity-80' onClick={handlePerfilClick}>
+              Perfil
+            </button>
+            <button className=' bg-white bg-opacity-80' onClick={handleMensajesClick}>
+              Mensajes
+            </button>
+            <button className=' bg-white bg-opacity-80' onClick={handlePublicacionesClick}>
+              Publicaciones
+            </button>
+            <button className=' bg-white bg-opacity-80' onClick={handleSeguimientosClick}>
+              Seguimientos
+            </button>
+            <button className=' bg-white bg-opacity-80' onClick={handleCerrarSesion}>
+              Cerrar sesión
+            </button>
+          </ul>
+        </div>
     </main>
   )
 }

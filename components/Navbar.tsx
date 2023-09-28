@@ -5,12 +5,34 @@ import { useRouter } from 'next/router';
 interface NavbarProps {
   currentComponent: string;
   setCurrentComponent: (component: string) => void;
+  isMenuOpen: any
+  setIsMenuOpen: any
 }
 
-const Navbar: FC<NavbarProps> = ({ currentComponent, setCurrentComponent }) => {
+const Navbar: FC<NavbarProps> = ({ currentComponent, setCurrentComponent, isMenuOpen,
+    setIsMenuOpen }) => {
   const router = useRouter();  
-   const redirectHome = () => {
+
+
+  const redirectHome = () => {
+    setCurrentComponent('Home')
+    setIsMenuOpen(false)
     router.push('/dashboard');
+  };
+ 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    console.log(isMenuOpen)
+  }
+ 
+
+  const handleSearchClick = () => {
+    setCurrentComponent('Search')
+    setIsMenuOpen(false)
+  };
+  const handleNotificationsClick = () => {
+    setCurrentComponent('Notifications')
+    setIsMenuOpen(false)
   };
 
   return (
@@ -19,7 +41,7 @@ const Navbar: FC<NavbarProps> = ({ currentComponent, setCurrentComponent }) => {
         <Image src="/logos/3.png" alt="Logo3" width={50} height={50} />
       </div>
       <div className="flex items-center">
-        <div className="mr-4">
+        <div className="mr-4"  onClick={handleSearchClick}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6 text-black cursor-pointer"
@@ -41,7 +63,7 @@ const Navbar: FC<NavbarProps> = ({ currentComponent, setCurrentComponent }) => {
             />
           </svg>
         </div>
-        <div className="mr-4">
+        <div className="mr-4"  onClick={handleNotificationsClick}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6 text-black cursor-pointer"
@@ -57,8 +79,8 @@ const Navbar: FC<NavbarProps> = ({ currentComponent, setCurrentComponent }) => {
             />
           </svg>
         </div>
-        <div>
-          <svg
+        <div    onClick={toggleMenu}>
+           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6 text-black cursor-pointer"
             fill="none"
