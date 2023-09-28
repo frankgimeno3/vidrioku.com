@@ -2,12 +2,9 @@ import { FC } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router'; 
 
-interface NavbarProps {
-  currentComponent: string;
-  setCurrentComponent: (component: string) => void;
-}
+ 
 
-const Navbar: FC<NavbarProps> = ({ currentComponent, setCurrentComponent }) => {
+const Footer: FC= ({   }) => {
   const router = useRouter();  
    const redirectHome = () => {
     router.push('/dashboard');
@@ -78,4 +75,4 @@ const Navbar: FC<NavbarProps> = ({ currentComponent, setCurrentComponent }) => {
   );
 };
 
-export default Navbar;
+export default Footer;
