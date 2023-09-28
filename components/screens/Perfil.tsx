@@ -14,9 +14,14 @@ const Perfil: FC = ({  }) => {
 
    
 
-  return (
-    <div className="bg-gray-200 h-screen">
-            <h2>Esto es el Perfil</h2>
+   return (
+    <div className="bg-zinc-500 h-screen">
+      <div className="bg-white mx-6 h-full text-zinc-900">
+        <div className='p-5'>
+          <h2>Bienvenido a tu perfil, Usuario</h2>
+
+        </div>
+      </div>
     </div>
   );
 };

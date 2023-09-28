@@ -14,9 +14,14 @@ const Seguimientos: FC = ({  }) => {
 
    
 
-  return (
-    <div className="bg-gray-200 h-screen">
-            <h2>Esto es el Seguimientos</h2>
+   return (
+    <div className="bg-zinc-500 h-screen">
+      <div className="bg-white mx-6 h-full text-zinc-900">
+        <div className='p-5'>
+          <h2>Bienvenido a Seguimientos, Usuario</h2>
+
+        </div>
+      </div>
     </div>
   );
 };
