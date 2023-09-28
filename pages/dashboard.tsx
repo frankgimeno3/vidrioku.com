@@ -75,21 +75,21 @@ export default function Dashboard() {
       {componentToRender}
       <Footer />
       <div className={isMenuOpen ? 
-          'fixed top-0 right-0 flex flex-col text-gray-800 z-50 bg-white bg-opacity-90   mt-16 border border-gray-100' : 'hidden'}>
-          <ul className='flex flex-col text-lg text-gray-600 w-screen '>
-            <button className=' bg-white bg-opacity-80' onClick={handlePerfilClick}>
+          'fixed top-0 right-0 flex flex-col text-gray-800 z-50 bg-zinc-800  mt-20 border border-gray-100' : 'hidden'}>
+          <ul className='flex flex-col text-md text-gray-100 w-screen '>
+            <button  className='py-2 hover:bg-zinc-500' onClick={handlePerfilClick}>
               Perfil
             </button>
-            <button className=' bg-white bg-opacity-80' onClick={handleMensajesClick}>
+            <button className='py-2 hover:bg-zinc-500' onClick={handleMensajesClick}>
               Mensajes
             </button>
-            <button className=' bg-white bg-opacity-80' onClick={handlePublicacionesClick}>
+            <button className='py-2 hover:bg-zinc-500' onClick={handlePublicacionesClick}>
               Publicaciones
             </button>
-            <button className=' bg-white bg-opacity-80' onClick={handleSeguimientosClick}>
+            <button className='py-2 hover:bg-zinc-500' onClick={handleSeguimientosClick}>
               Seguimientos
             </button>
-            <button className=' bg-white bg-opacity-80' onClick={handleCerrarSesion}>
+            <button className='py-2 hover:bg-zinc-500' onClick={handleCerrarSesion}>
               Cerrar sesión
             </button>
           </ul>
