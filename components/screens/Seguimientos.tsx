@@ -15,10 +15,10 @@ const Seguimientos: FC = ({  }) => {
    
 
    return (
-    <div className="bg-zinc-500 h-screen">
-      <div className="bg-white mx-6 h-full text-zinc-900">
-        <div className='p-5'>
-          <h2>Bienvenido a Seguimientos, Usuario</h2>
+    <div className="h-screen bg-gradient-to-b from-zinc-900 to-zinc-600">
+      <h2 className="bg-zinc-800 mx-6 font-bold text-lg px-5 py-3">Seguimientos</h2>
+    <div className=" mx-6  bg-white  h-full text-zinc-900">
+      <div className="p-5">
 
         </div>
       </div>
