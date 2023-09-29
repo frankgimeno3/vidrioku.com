@@ -1,8 +1,7 @@
 
 import { FC } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
-
+ 
 interface SectorProps {
     setSectorSeleccionado:any
      sectorSeleccionado:any
@@ -10,8 +9,7 @@ interface SectorProps {
 
 const Sector: FC<SectorProps> = ({setSectorSeleccionado,  sectorSeleccionado }) => {
 
-   const router = useRouter();
-
+ 
 
    const seArquitectos = () => {
     setSectorSeleccionado('Arquitectos');

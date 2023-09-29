@@ -1,16 +1,14 @@
 
 import { FC } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
-
+ 
 interface criteriosOfertasProps {
     setRegionSeleccionada: any
      regionSeleccionada:any
 }
 
 const criteriosOfertas: FC<criteriosOfertasProps> = ({ setRegionSeleccionada, regionSeleccionada }) => {
-
-     const router = useRouter();
+ 
 
      const setESP = () => {
         setRegionSeleccionada('ESP');
