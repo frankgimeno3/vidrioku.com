@@ -1,8 +1,7 @@
 
 import { FC } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
-
+ 
 interface criteriosPerfilesProps {
   tipoConsulta: any
   regionSeleccionada: any
@@ -11,8 +10,7 @@ interface criteriosPerfilesProps {
 
 const criteriosPerfiles: FC<criteriosPerfilesProps> = ({ tipoConsulta, regionSeleccionada, sectorSeleccionado }) => {
 
-  const router = useRouter();
-
+ 
 
 
   return (
