@@ -26,14 +26,14 @@ const Search: FC = () => {
           <h2 >Qué desea consultar?</h2>
           <div className="flex flex-row pt-1 text-xs">
             <button
-              className={`${tipoConsulta == 'Ofertas' ? 'bg-zinc-500 text-zinc-100' : 'bg-zinc-100 text-zinc-700'
+              className={`${tipoConsulta == 'Ofertas' ? 'bg-zinc-500 text-zinc-100 shadow-lg' : 'bg-zinc-100 text-zinc-700 shadow-lg'
                 } p-2 w-full mr-1 rounded-xs`}
               onClick={setOfertas}
             >
               Ofertas de empleo
             </button>
             <button
-              className={`${tipoConsulta == 'Trabajadores' ? 'bg-zinc-500 text-zinc-100' : 'bg-zinc-100 text-zinc-700'
+              className={`${tipoConsulta == 'Trabajadores' ? 'bg-zinc-500 text-zinc-100 shadow-lg' : 'bg-zinc-100 text-zinc-700 shadow-lg'
                 } p-2 w-full ml-1 rounded-xs`}
               onClick={setTrabajadores}
             >
