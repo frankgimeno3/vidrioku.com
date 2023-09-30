@@ -73,7 +73,7 @@ export default function Dashboard() {
         <Navbar currentComponent={currentComponent} setCurrentComponent={setCurrentComponent}
           isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       {componentToRender}
-      <Footer />
+      <Footer onPageChange={handlePageChange} />
       <div className={isMenuOpen ? 
           'fixed top-0 right-0 flex flex-col text-gray-800 z-50 bg-zinc-800  mt-20 ' : 'hidden'}>
           <ul className='flex flex-col text-md text-gray-100 w-screen '>

@@ -1,74 +1,54 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/router'; 
+import { useRouter } from 'next/router';
 
+
+interface FooterProps {
+  onPageChange: (pageName: string) => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
+  const router = useRouter();
+
+  const redirection = (pageName: string) => {
+    onPageChange(pageName)
+    router.push("/");
+  };
  
 
-const Footer: FC= ({   }) => {
-  const router = useRouter();  
-   const redirectHome = () => {
-    router.push('/dashboard');
-  };
-
   return (
-    <div className="bg-white shadow-lg p-4 flex justify-between">
-      <div className="flex items-center" onClick={redirectHome}>  
-      <Image src="/logos/3.png" alt="Logo3" width={50} height={50} />
-      </div>
-      <div className="flex items-center">
-        <div className="mr-4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-black cursor-pointer"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-            />
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M21 21l-4.35-4.35M8 10H6l-2 6h12l-2-6h-2"
-            />
-          </svg>
+    <div className="bg-zinc-300 shadow-lg p-4 flex justify-between">
+      <div className="mx-10 lg:mx-24 text-zinc-800 relative z-10">
+        <div className="flex flex-col sm:flex-row  items-top justify-between align-top">
+          <div className="mb-4 flex-1">
+            <h3 className="text-sm font-semibold">Sobre Nosotros</h3>
+            <p className="text-xs mt-5">
+              Giru.es es una agencia de desarrolladores web con sede en Barcelona, comprometidos en ofrecer soluciones de desarrollo de software de alta calidad. Nuestro equipo está formado por expertos en diferentes tecnologías y estamos dedicados a ayudar a nuestros clientes a alcanzar sus objetivos tecnológicos.
+            </p>
+            <p className="text-xs">
+              Actualmente, formamos parte del grupo PROPORCION3,S.A. medios de comunicación .</p>
+          </div>
+          <div className="mb-4  flex-1 text-left py-10 sm:py-1" >
+            <h3 className="text-sm font-semibold">Enlaces Rápidos</h3>
+                <div className="  flex flex-col  text-xs">
+              <button className="mt-5 text-left md:text-center" onClick={() => redirection('Home')} >Inicio</button>
+              <button className="mt-5 text-left md:text-center" onClick={() => redirection('QuienesSomos')} >Nosotros</button>
+              <button className="mt-5 text-left md:text-center" onClick={() => redirection('Servicios')} >Servicios</button>
+              <button className="mt-5 text-left md:text-center" onClick={() => redirection('Contacto')} >Contacto</button>
+            </div>
+          </div>
+          <div className="flex-1">
+            <h3 className="text-md font-semibold">Contáctanos</h3>
+            <address className="flex flex-col text-sm mt-5">
+              <p>Dirección: Bruc 48, Barcelona</p>
+              <p>Teléfono: (+34) *** *** ***</p>
+              <p>Email: info@vidrioku.es</p>
+            </address>
+      <Image src="/logos/4.png" alt="Logo3" width={50} height={50} />
+          </div>
         </div>
-        <div className="mr-4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-black cursor-pointer"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-            />
-          </svg>
-        </div>
-        <div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-black cursor-pointer"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
+        <div className="mt-4 text-center text-zinc-800 text-sm">
+          &copy; 2023 PROPORCION3,S.A. | Todos los derechos reservados
         </div>
       </div>
     </div>
