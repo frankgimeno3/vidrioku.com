@@ -2,14 +2,14 @@ import { FC } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router'; 
 
-interface NavbarProps {
+interface NavUnloggedProps {
   currentComponent: string;
   setCurrentComponent: (component: string) => void;
   isMenuOpen: any
   setIsMenuOpen: any
 }
 
-const Navbar: FC<NavbarProps> = ({ currentComponent, setCurrentComponent, isMenuOpen,
+const NavUnlogged: FC<NavUnloggedProps> = ({ currentComponent, setCurrentComponent, isMenuOpen,
     setIsMenuOpen }) => {
   const router = useRouter();  
 
@@ -100,4 +100,4 @@ const Navbar: FC<NavbarProps> = ({ currentComponent, setCurrentComponent, isMenu
   );
 };
 
-export default Navbar;
+export default NavUnlogged;
