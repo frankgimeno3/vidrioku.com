@@ -4,7 +4,7 @@ import Floating from "../components/home/Floating";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 
-export default function Login() {
+export default function IniciarSesion() {
     const router = useRouter();
 
     const handleReturn = () => {
