@@ -1,8 +1,8 @@
 import React, { FC, useState } from 'react';
-import Compras from './tipos/comercial/Comercial'
+import Compras from './tipos/compras/Compras'
 import Comercial from './tipos/comercial/Comercial'
-import Dtecnico from './tipos/comercial/Comercial'
-import Ingenieros from './tipos/comercial/Comercial'
+import Dtecnico from './tipos/dtecnico/dtecnico'
+import Ingenieros from './tipos/ingenieros/ingenieros'
 import Operarios from './tipos/operarios/departamentos/Operarios'
 import Otros from './tipos/Otros'
 

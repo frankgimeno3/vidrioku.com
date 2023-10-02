@@ -16,7 +16,7 @@ const Search: FC = () => {
   };
 
   return (
-    <div className="h-screen bg-gradient-to-b from-zinc-900 to-zinc-600">
+    <div className="min-h-screen bg-gradient-to-b from-zinc-900 to-zinc-600">
       <h2 className="bg-zinc-800 mx-6 font-bold text-lg px-5 py-3">Búsqueda</h2>
       <div className=" mx-6  bg-white  h-full text-zinc-900">
         <div className="p-5">
