@@ -7,8 +7,8 @@ import ListadoOfertas from './bolsaOfertas/listadoOfertas'
 const Search: FC = () => {
   const router = useRouter();
   const [tipoConsulta, setTipoConsulta] = useState('');
-  const [isOfertasSelected, setIsOfertasSelected] = useState('');  //quiero lograr ocultar todo antes de renderizar listado
-  const [isTrabajadoresSelected, setIsTrabajadoresSelected] = useState(''); //quiero lograr ocultar todo antes de renderizar listado
+  const [isOfertasSelected, setIsOfertasSelected] = useState(false);  //quiero lograr ocultar todo antes de renderizar listado
+  const [isTrabajadoresSelected, setIsTrabajadoresSelected] = useState(false); //quiero lograr ocultar todo antes de renderizar listado
   const setOfertas = () => {
     setTipoConsulta('Ofertas');
   };
@@ -43,7 +43,7 @@ const Search: FC = () => {
 
           </div>
         </div>
-0
+ 
         {tipoConsulta == "Ofertas" && <TipoOferta setIsOfertasSelected={setIsOfertasSelected}/>}
         {tipoConsulta == "Trabajadores" && <TipoTrabajador setIsTrabajadoresSelected={setIsTrabajadoresSelected} />}
       </div>

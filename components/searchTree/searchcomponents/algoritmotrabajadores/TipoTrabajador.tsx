@@ -8,14 +8,14 @@ import Otros from './tipos/Otros'
 
 
 interface TipoTrabajadorProps {
-    setIsTrabajadoresSelected:any
-  }
+    setIsTrabajadoresSelected: (component: boolean) => void;
+}
 
-const TipoTrabajador: FC <TipoTrabajadorProps>= (setIsTrabajadoresSelected) => {
+const TipoTrabajador: FC<TipoTrabajadorProps> = ({ setIsTrabajadoresSelected }) => {
     const [tipoTrabajador, setTipoTrabajador] = useState('');
 
     const setCompras = () => {
-        setTipoTrabajador('Compras')
+        setTipoTrabajador('Compras');
     }
     const setComercial = () => {
         setTipoTrabajador('Comercial')
@@ -34,7 +34,7 @@ const TipoTrabajador: FC <TipoTrabajadorProps>= (setIsTrabajadoresSelected) => {
     }
 
     return (
-         <div className=" mx-6  bg-white  h-full text-zinc-900 px-5 pb-5">
+        <div className=" mx-6  bg-white  h-full text-zinc-900 px-5 pb-5">
 
             <h2 className="">Qué tipo de perfil necesita?</h2>
             <div className="px-2 flex flex-row w-full text-xs">
@@ -60,15 +60,15 @@ const TipoTrabajador: FC <TipoTrabajadorProps>= (setIsTrabajadoresSelected) => {
                         } p-2 w-full mt-1 rounded-xs h-14`}
                         onClick={setOtros}>Otros</button>
                 </div>
-        </div>
-                {tipoTrabajador == "Compras" && <Compras />}
-                {tipoTrabajador == "Comercial" && <Comercial />}
-                {tipoTrabajador == "Dtecnico" && <Dtecnico />}
-                {tipoTrabajador == "Ingenieros" && <Ingenieros />}
-                {tipoTrabajador == "Operarios" && <Operarios />}
-                {tipoTrabajador == "Otros" && <Otros />}
             </div>
-     );
+            {tipoTrabajador == "Compras" && <Compras setIsTrabajadoresSelected={setIsTrabajadoresSelected} />}
+            {tipoTrabajador == "Comercial" && <Comercial />}
+            {tipoTrabajador == "Dtecnico" && <Dtecnico />}
+            {tipoTrabajador == "Ingenieros" && <Ingenieros />}
+            {tipoTrabajador == "Operarios" && <Operarios />}
+            {tipoTrabajador == "Otros" && <Otros />}
+        </div>
+    );
 };
 
 export default TipoTrabajador;
