@@ -21,10 +21,10 @@ const Dtecnico: FC = () => {
                     <button className="bg-zinc-100 text-zinc-700 shadow-lg p-2 text-xs h-16 my-2">Ingenieros técnicos mecánicos</button>
                     <button className="bg-zinc-100 text-zinc-700 shadow-lg p-2 text-xs h-16 my-2">Ingenieros técnicos electrónicos</button>
                     <button className="bg-zinc-100 text-zinc-700 shadow-lg p-2 text-xs h-16 my-2">Ingenieros industriales</button>
-                    <button className="bg-zinc-100 text-zinc-700 shadow-lg p-2 text-xs h-16 my-2"
-                        onClick={setPosicion}>Filtrar por posición deseada</button>
                 </div>
             </div>
+                    <button className="bg-zinc-100 text-zinc-700 shadow-lg p-2 text-xs h-10 mb-2 mx-4"
+                        onClick={setPosicion}>Filtrar por posición deseada</button>
             {segun == "Posicion" && <Dtporposicion />}
         </div>
 
