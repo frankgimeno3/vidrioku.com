@@ -1,7 +1,11 @@
 import { FC } from "react";
 
  
-const TipoOferta: FC = () => {
+interface TipoOfertaProps {
+  setIsOfertasSelected:any
+}
+
+const TipoOferta: FC <TipoOfertaProps> = (setIsOfertasSelected) => {
  
 
   return (

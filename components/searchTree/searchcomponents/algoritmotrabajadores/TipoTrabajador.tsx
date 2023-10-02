@@ -6,7 +6,12 @@ import Ingenieros from './tipos/ingenieros/ingenieros'
 import Operarios from './tipos/operarios/departamentos/Operarios'
 import Otros from './tipos/Otros'
 
-const TipoTrabajador: FC = () => {
+
+interface TipoTrabajadorProps {
+    setIsTrabajadoresSelected:any
+  }
+
+const TipoTrabajador: FC <TipoTrabajadorProps>= (setIsTrabajadoresSelected) => {
     const [tipoTrabajador, setTipoTrabajador] = useState('');
 
     const setCompras = () => {

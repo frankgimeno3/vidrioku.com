@@ -43,13 +43,13 @@ const Search: FC = () => {
 
           </div>
         </div>
-
-        {tipoConsulta == "Ofertas" && <TipoOferta />}
-        {tipoConsulta == "Trabajadores" && <TipoTrabajador />}
+0
+        {tipoConsulta == "Ofertas" && <TipoOferta setIsOfertasSelected={setIsOfertasSelected}/>}
+        {tipoConsulta == "Trabajadores" && <TipoTrabajador setIsTrabajadoresSelected={setIsTrabajadoresSelected} />}
       </div>
 
-      {isOfertasSelected  && <TipoOferta />}
-      {isTrabajadoresSelected && <TipoOferta />}
+      {isOfertasSelected  && <ListadoOfertas />}
+      {isTrabajadoresSelected && <ListadoTrabajadores />}
 
     </>
 
