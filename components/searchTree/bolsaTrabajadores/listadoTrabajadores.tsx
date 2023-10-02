@@ -1,38 +1,17 @@
 
 import { FC } from 'react';
 import Image from 'next/image';
- 
-interface ListadoTrabajadoresProps {
-    setRegionSeleccionada: any
-     regionSeleccionada:any
-}
+import SearchTrabajadores from './searchTrabajadores'
+import FiltroTrabajadores from './filtroTrabajadores'
 
-const ListadoTrabajadores: FC<ListadoTrabajadoresProps> = ({ setRegionSeleccionada, regionSeleccionada }) => {
- 
 
-     const setESP = () => {
-        setRegionSeleccionada('ESP');
-       };
-    
-      const setLATAM = () => {
-        setRegionSeleccionada('LATAM');
-       };
+const ListadoTrabajadores: FC = ({ }) => {
 
-    return (
-        <div  >
-            <h2 className='mt-3'>En qué región?</h2>
-            <div className='flex flex-row   pt-1   text-xs'>
-            <button
-              className={`${
-                regionSeleccionada == 'ESP' ? 'bg-zinc-500 text-zinc-100' : 'bg-zinc-100 text-zinc-700'
-              } p-2 w-full mr-1 rounded-xs`}                onClick={setESP}>España</button>
-<button
-              className={`${
-                regionSeleccionada == 'LATAM' ? 'bg-zinc-500 text-zinc-100' : 'bg-zinc-100 text-zinc-700'
-              } p-2 w-full mr-1 rounded-xs`}                onClick={setLATAM}>América Latina</button>
-            </div>
-        </div>
-    );
+  return (
+    <div>
+      <h2> Esto tendría que ser el listado de Trabajadores</h2>
+    </div>
+  );
 };
 
 export default ListadoTrabajadores;

@@ -69,7 +69,7 @@ export default function Dashboard() {
     setIsMenuOpen(false)
   };
   return (
-    <main className='h-screen bg-zinc-500'>
+    <main className='h-screen bg-zinc-500 '>
         <Navbar currentComponent={currentComponent} setCurrentComponent={setCurrentComponent}
           isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       {componentToRender}
