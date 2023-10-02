@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 
-export default function IniciarSesion() {
+export default function Login() {
     const router = useRouter();
 
     const handleReturn = () => {
