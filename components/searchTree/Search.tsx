@@ -3,15 +3,9 @@ import { useRouter } from 'next/router';
 import TipoOferta from './searchcomponents/algoritmofertas/TipoOferta'
 import TipoTrabajador from './searchcomponents/algoritmotrabajadores/TipoTrabajador'
 
-// import Region from './searchcomponents/Region';
-// import Sector from './searchcomponents/sector';
-// import CriteriosPerfiles from './searchcomponents/criteriosPerfiles';
-
 const Search: FC = () => {
   const router = useRouter();
   const [tipoConsulta, setTipoConsulta] = useState('');
-  // const [regionSeleccionada, setRegionSeleccionada] = useState("");
-  // const [sectorSeleccionado, setSectorSeleccionado] = useState("");
 
   const setOfertas = () => {
     setTipoConsulta('Ofertas');
@@ -43,11 +37,9 @@ const Search: FC = () => {
               Perfiles de profesionales técnicos
             </button>
           </div>
-          {tipoConsulta == "Ofertas" && <TipoOferta/>}
-          {tipoConsulta == "Trabajadores" && <TipoTrabajador/>}
-          {/* {tipoConsulta != "" && <Region setRegionSeleccionada={setRegionSeleccionada} regionSeleccionada={regionSeleccionada} />}
-          {regionSeleccionada != "" && <Sector setSectorSeleccionado={setSectorSeleccionado} sectorSeleccionado={sectorSeleccionado} />}
-          {sectorSeleccionado != "" && <CriteriosPerfiles tipoConsulta={tipoConsulta} regionSeleccionada={regionSeleccionada} sectorSeleccionado={sectorSeleccionado} />} */}
+          {tipoConsulta == "Ofertas" && <TipoOferta />}
+          {tipoConsulta == "Trabajadores" && <TipoTrabajador />}
+
         </div>
       </div>
     </div>
