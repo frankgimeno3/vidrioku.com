@@ -7,7 +7,7 @@ const FiltroTrabajadores: FC = ({ }) => {
 
   return (
     <div>
-      <h2> Esto tendría que ser el listado de Trabajadores</h2>
+      <h2 className='text-right pr-5 text-sm text-gray-700'> Funciones búsqueda avanzadas</h2>
     </div>
   );
 };
