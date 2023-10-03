@@ -12,12 +12,18 @@ import PageListButtons from '../compListados/PageListButtons'
 const ListadoTrabajadores: FC = ({ }) => {
 
   return (
-    <div className='min-h-screen flex flex-col'>
+    <div className='min-h-screen flex flex-col bg-gray-50'>
       <nav className='flex flex-col p-2 bg-gray-50 text-black'>
         <SearchTrabajadores/>
         <FiltroTrabajadores/>
       </nav>
-      <h2> Esto tendría que ser el listado de Ofertas</h2>
+      <Trabajador/>
+      <Trabajador/>
+      <Trabajador/>
+      <Trabajador/>
+      <Trabajador/>
+      <Trabajador/>
+
     </div>
   );
 };
