@@ -14,7 +14,7 @@ const ListadoTrabajadores: FC = ({ }) => {
   return (
     <div className="flex flex-col  min-h-screen bg-zinc-800 ">
 
-      <nav className="bg-zinc-800  bg-opacity-50  py-3 text-center">
+      <nav className="bg-white  bg-opacity-10  py-2 px-1 text-center">
         <SearchTrabajadores />
         <FiltroTrabajadores />
       </nav>

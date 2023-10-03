@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Trabajador: FC = () => {
   return (
-    <div className="flex flex-row shadow-lg mt-1 py-3 ">
+    <div className="flex flex-row shadow-lg mx-3 py-2 ">
       <div className="flex flex-col shadow border border-grey-300  bg-white text-black ">
         <h2 className="text-sm pt-1 text-right pr-3">Juan Antonio Recio Dominguez</h2>
         <div className="flex flex-col mt-1 ml-5 ">

@@ -36,7 +36,7 @@ const Navbar: FC<NavbarProps> = ({ currentComponent, setCurrentComponent, isMenu
   };
 
   return (
-    <div className="bg-white shadow-lg p-4 flex justify-between border border-gray-100 px-6">
+    <div className="bg-white shadow-lg p-4 flex justify-between  px-6">
       <div className="flex items-center" onClick={redirectHome}>
         <Image src="/logos/3.png" alt="Logo3" width={50} height={50} />
       </div>
