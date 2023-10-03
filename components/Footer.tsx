@@ -19,7 +19,7 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
   return (
     <div className="bg-gray-50 shadow-lg p-4 pt-12 flex justify-center  border-gray-300">
       <div className="mx-5 lg:mx-24 text-gray-600 relative z-10">
-        <div className="flex flex-col sm:flex-row  items-top justify-between align-top">
+        <div className="flex flex-col   items-top justify-between align-top ">
           <div className="flex-1">
             <h3 className="text-sm text font-semibold">Sobre Nosotros</h3>
             <p className="text-xs mt-2">
@@ -28,7 +28,7 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
             <p className="text-xs">
               Actualmente, formamos parte del grupo PROPORCION3,S.A. medios de comunicación .</p>
           </div>
-          <div className='flex flex-row py-5'>
+          <div className='flex flex-row py-5 mx-auto'>
             <div className="flex-1 text-left sm:py-1" >
               <h3 className="text-sm font-semibold">Enlaces Rápidos</h3>
               <div className="flex flex-col  text-xs">
