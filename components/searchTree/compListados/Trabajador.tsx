@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Trabajador: FC = () => {
   return (
-    <div className="flex flex-col justify-center items-center py-2 px-2 bg-white text-black">
+    <div className="flex flex-col justify-center items-center px-8 py-1 bg-white text-black">
 
       <div className="flex flex-col bg-white rounded-lg  mt-1  shadow border border-grey-300   ">
         <h2 className="font-medium pt-2 pl-3">Juan Antonio Recio Dominguez</h2>
@@ -20,8 +20,8 @@ const Trabajador: FC = () => {
 
           </div>
           <div className="flex flex-col my-2 ">
-            <h2 className='text-white bg-slate-700 text-sm mr-4 px-2 my-1'>Ingeniero Técnico Mecánico  </h2>
-            <h2 className='text-white bg-slate-700 text-sm mr-4 px-2 mt-1 mb-2'>Ingeniero Técnico Industrial </h2>
+            <h2 className='text-white bg-slate-600 text-sm mr-4 px-2 my-1 rounded'>Ingeniero Técnico Mecánico  </h2>
+            <h2 className='text-white bg-slate-600 text-sm mr-4 px-2 mt-1 mb-2 rounded'>Ingeniero Técnico Industrial </h2>
             <div className='flex flex-row'>
               <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" className='w-5'
                 enable-background="new 0 0 64 64" xmlSpace="preserve" fill="#000000">
