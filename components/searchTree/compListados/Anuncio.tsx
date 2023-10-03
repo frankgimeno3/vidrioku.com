@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Anuncio: FC = () => {
   return (
-    <div className="flex flex-row justify-center items-center py-5 px-4 bg-white ">
+    <div className="flex flex-row justify-center items-center py-1 px-4  ">
        <Image
                 src="/anuncio2.jpg"
                 alt="ing2"

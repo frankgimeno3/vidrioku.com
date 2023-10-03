@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 const Pasarela: FC = () => {
   return (
-    <div className='bg-white py-5'>
-    <h3 className='text-gray-500 text-sm pl-5 '>Empresas destacadas</h3>
-      <div className="flex flex-row justify-center items-center py-2 px-2 ">
+    <div className='bg-white bg-opacity-10 py-3'>
+    <h3 className='text-gray-300 text-sm pl-5 '>Empresas destacadas</h3>
+      <div className="flex flex-row justify-center items-center  px-2 ">
         <Image
           src="/inventedLogos/1.png"
           alt="ing1"

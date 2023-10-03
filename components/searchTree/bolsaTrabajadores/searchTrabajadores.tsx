@@ -9,7 +9,7 @@ const SearchTrabajadores: FC = () => {
         className="border border-gray-200 text-gray-500 ml-2 px-4 py-2 text-xs rounded m-1 w-full"
       />
       <button
-        className="bg-white shadow border border-gray-200 rounded px-4 py-2 text-xs m-1"
+        className="bg-white shadow border text-gray-500 border-gray-200 rounded px-4 py-2 text-xs m-1"
       >
         Buscar
       </button>
