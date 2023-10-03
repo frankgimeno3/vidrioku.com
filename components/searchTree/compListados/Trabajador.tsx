@@ -5,7 +5,7 @@ const Trabajador: FC = () => {
   return (
     <div className="flex flex-col justify-center items-center px-8 py-1 bg-white text-black">
 
-      <div className="flex flex-col bg-white rounded-lg  mt-1  shadow border border-grey-300   ">
+      <div className="flex flex-col bg-gray-100 rounded-lg  mt-1  shadow border border-grey-300   ">
         <h2 className="font-medium pt-2 pl-3">Juan Antonio Recio Dominguez</h2>
         <div className='flex flex-row '>
           <div className="py-auto flex   justify-center text-center align-center ">

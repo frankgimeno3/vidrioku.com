@@ -34,30 +34,30 @@ const TipoTrabajador: FC<TipoTrabajadorProps> = ({ setIsTrabajadoresSelected }) 
     }
 
     return (
-        <div className=" mx-6  bg-white  h-full text-zinc-900 px-5 pb-5">
+        <div className=" mx-6  bg-white bg-opacity-5 h-full text-zinc-100 px-5 pb-5">
 
-            <h2 className="">Qué tipo de perfil necesita?</h2>
+            <h2 className="text-center pt-5">Qué tipo de perfil necesita?</h2>
             <div className="px-2 flex flex-row w-full text-xs">
-                <div className="flex flex-col flex-1 p-2 ">
-                    <button className={`${tipoTrabajador == 'Compras' ? 'bg-zinc-500 text-zinc-100 shadow-lg' : 'bg-zinc-100 text-zinc-700 shadow-lg'
-                        } p-2 w-full mt-1 rounded-xs h-14`}
+                <div className="flex flex-col flex-1 px-1 ">
+                    <button className={`${tipoTrabajador == 'Compras' ? 'bg-zinc-100 text-zinc-700 shadow-lg' : 'bg-zinc-700 text-zinc-100 shadow-lg'
+                        } p-2 w-full my-1 rounded-lg h-20`}
                         onClick={setCompras}>Departamento de compras</button>
-                    <button className={`${tipoTrabajador == 'Comercial' ? 'bg-zinc-500 text-zinc-100 shadow-lg' : 'bg-zinc-100 text-zinc-700 shadow-lg'
-                        } p-2 w-full mt-1 rounded-xs h-14`}
+                    <button className={`${tipoTrabajador == 'Comercial' ? 'bg-zinc-100 text-zinc-700 shadow-lg' : 'bg-zinc-700 text-zinc-100 shadow-lg'
+                        } p-2 w-full my-1 rounded-lg h-20`}
                         onClick={setComercial}>Departamento comercial</button>
-                    <button className={`${tipoTrabajador == 'Dtecnico' ? 'bg-zinc-500 text-zinc-100 shadow-lg' : 'bg-zinc-100 text-zinc-700 shadow-lg'
-                        } p-2 w-full mt-1 rounded-xs h-14`}
+                    <button className={`${tipoTrabajador == 'Dtecnico' ? 'bg-zinc-100 text-zinc-700 shadow-lg' : 'bg-zinc-700 text-zinc-100 shadow-lg'
+                        } p-2 w-full my-1 rounded-lg h-20`}
                         onClick={setDtecnico}>Departamento técnico</button>
                 </div>
-                <div className="flex flex-col flex-1 p-2">
-                    <button className={`${tipoTrabajador == 'Ingenieros' ? 'bg-zinc-500 text-zinc-100 shadow-lg' : 'bg-zinc-100 text-zinc-700 shadow-lg'
-                        } p-2 w-full mt-1 rounded-xs h-14`}
+                <div className="flex flex-col flex-1 px-1">
+                    <button className={`${tipoTrabajador == 'Ingenieros' ? 'bg-zinc-100 text-zinc-700 shadow-lg' : 'bg-zinc-700 text-zinc-100 shadow-lg'
+                        } p-2 w-full my-1 rounded-lg h-20`}
                         onClick={setIngenieros}>Ingenieros</button>
-                    <button className={`${tipoTrabajador == 'Operarios' ? 'bg-zinc-500 text-zinc-100 shadow-lg' : 'bg-zinc-100 text-zinc-700 shadow-lg'
-                        } p-2 w-full mt-1 rounded-xs h-14`}
+                    <button className={`${tipoTrabajador == 'Operarios' ? 'bg-zinc-100 text-zinc-700 shadow-lg' : 'bg-zinc-700 text-zinc-100 shadow-lg'
+                        } p-2 w-full my-1 rounded-lg h-20`}
                         onClick={setOperarios}>Operarios</button>
-                    <button className={`${tipoTrabajador == 'Otros' ? 'bg-zinc-500 text-zinc-100 shadow-lg' : 'bg-zinc-100 text-zinc-700 shadow-lg'
-                        } p-2 w-full mt-1 rounded-xs h-14`}
+                    <button className={`${tipoTrabajador == 'Otros' ? 'bg-zinc-100 text-zinc-700 shadow-lg' : 'bg-zinc-700 text-zinc-100 shadow-lg'
+                        } p-2 w-full my-1 rounded-lg h-20`}
                         onClick={setOtros}>Otros</button>
                 </div>
             </div>

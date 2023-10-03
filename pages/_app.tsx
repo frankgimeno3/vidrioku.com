@@ -1,9 +1,9 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head';
-import {Lora} from 'next/font/google'
+import {Montserrat} from 'next/font/google'
 
-const lora = Lora({
+const lora = Montserrat({
   subsets: ["latin"],  
   weight: "400"
  })
