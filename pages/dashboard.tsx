@@ -89,6 +89,9 @@ export default function Dashboard() {
             <button className='py-2 hover:bg-zinc-500' onClick={handleSeguimientosClick}>
               Seguimientos
             </button>
+            <button className='py-2 hover:bg-zinc-500'  >
+              Configuración
+            </button>
             <button className='py-2 hover:bg-zinc-500' onClick={handleCerrarSesion}>
               Cerrar sesión
             </button>
