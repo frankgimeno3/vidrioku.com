@@ -68,7 +68,7 @@ const Dtecnico: FC<DtecnicoProps> = ({ setIsTrabajadoresSelected }) => {
             <button className={`${segun == 'Posicion' ? 'bg-zinc-100 text-zinc-700 shadow-lg' : 'bg-zinc-700 text-zinc-100 shadow-lg'
                 } p-2 w-full my-1 rounded-lg h-20`}
                 onClick={setPosicion}>Filtrar por posición deseada</button>
-            {segun == "Posicion" && <Dtporposicion />}
+            {segun == "Posicion" && <Dtporposicion setIsTrabajadoresSelected={setIsTrabajadoresSelected} />}
          </div>
 
     </>
