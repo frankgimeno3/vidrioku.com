@@ -34,7 +34,7 @@ const TipoTrabajador: FC<TipoTrabajadorProps> = ({ setIsTrabajadoresSelected }) 
     }
 
     return (
-        <div className=" mx-6  bg-white bg-opacity-5 h-full text-zinc-100 px-5 pb-5">
+        <div className="     h-full text-zinc-100 px-5 pb-5">
 
             <h2 className="text-center pt-5">Qué tipo de perfil necesita?</h2>
             <div className="px-2 flex flex-row w-full text-xs">
