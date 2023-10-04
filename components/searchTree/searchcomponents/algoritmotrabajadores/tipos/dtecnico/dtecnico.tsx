@@ -38,7 +38,7 @@ const Dtecnico: FC<DtecnicoProps> = ({ setIsTrabajadoresSelected }) => {
     return (<>
         <h2 className="pt-12">Qué perfiles le interesan más?</h2>
         <div className="px-2 flex flex-col w-full">
-            <div className="flex flex-row flex-1 p-2">
+            <div className="flex flex-row flex-1 p-2 text-xs">
                 <div className="flex flex-col flex-1 p-2">
                     <button className={`${segun == 'Arquitectos' ? 'bg-zinc-100 text-zinc-700 shadow-lg' : 'bg-zinc-700 text-zinc-100 shadow-lg'
                         } p-2 w-full my-1 rounded-lg h-20`}
@@ -62,11 +62,10 @@ const Dtecnico: FC<DtecnicoProps> = ({ setIsTrabajadoresSelected }) => {
                         onClick={setIndustriales}>Ingenieros industriales</button>
                 </div>
             </div>
-            {segun   && segun != "Posicion" &&<button className="bg-zinc-100 text-zinc-700 shadow-lg px-2 py-1 w-full mt-2 rounded-lg h-10  "
+            {segun   && segun != "Posicion" &&<button className="bg-zinc-100 text-zinc-700 shadow-lg px-2 py-1 w-full mt-2 rounded-lg h-10 text-xs "
                         onClick={mostrarListado}
                     > Obtener listado de perfiles</button>}
-            <button className={`${segun == 'Posicion' ? 'bg-zinc-100 text-zinc-700 shadow-lg' : 'bg-zinc-700 text-zinc-100 shadow-lg'
-                } p-2 w-full my-1 rounded-lg h-20`}
+            <button className="bg-zinc-100 text-zinc-700 shadow-lg px-2 py-1 w-full mt-2 rounded-lg h-10 text-xs" 
                 onClick={setPosicion}>Filtrar por posición deseada</button>
             {segun == "Posicion" && <Dtporposicion setIsTrabajadoresSelected={setIsTrabajadoresSelected} />}
          </div>
