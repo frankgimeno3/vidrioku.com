@@ -10,6 +10,7 @@ const Comercial: FC<ComercialProps> = ({ setIsTrabajadoresSelected }) => {
     const mostrarListado = () => {
         return setIsTrabajadoresSelected(true)
     }
+
     const opcionesComerciales = () => {
         switch (mostrarOpciones) {
           case true:
@@ -18,7 +19,6 @@ const Comercial: FC<ComercialProps> = ({ setIsTrabajadoresSelected }) => {
           case false:
             setMostrarOpciones(true);
             break;
-    
         }
       }
 
@@ -34,18 +34,19 @@ const Comercial: FC<ComercialProps> = ({ setIsTrabajadoresSelected }) => {
     const setCuentas = () => {
         return setSegun("Cuentas")
     }
+
+
     return (
         <div className="flex flex-col px-2 text-xs mt-6  ">
             <div className="flex flex-col px-2 py-5 bg-white bg-opacity-5 rounded-lg">
                 <h2 className="text-lg pb-3 text-white text-center">Resumen selección</h2>
                 <h3 className="px-5 py-2 text-sm">Perfil seleccionado:  Comercial </h3>
                 <div className="flex flex-col px-4 text-xs mx">
-                    <button className="bg-zinc-100 text-zinc-700 shadow-lg px-2 py-1 w-full mt-2 rounded-lg h-10  "
+                    <button className="bg-zinc-100 text-zinc-700 shadow-lg px-2 py-1 w-full mt-2 rounded-lg h-12  "
                         onClick={mostrarListado}
-                    > Obtener listado de perfiles</button>
+                    > Obtener listado de perfiles comerciales</button>
                     <button className="bg-zinc-100 text-zinc-700 shadow-lg px-2 py-1 w-full mt-2 rounded-lg h-10  "
                         onClick={opcionesComerciales}> Filtrar por perfil específico</button>
-
                 </div>
                     {mostrarOpciones && <>
                         <div className="flex flex-row mx-auto">
@@ -67,6 +68,9 @@ const Comercial: FC<ComercialProps> = ({ setIsTrabajadoresSelected }) => {
                                     onClick={setCuentas}> Gestor de cuentas</button>
                             </div>
                         </div>
+                        {segun && <button className="bg-zinc-100 text-zinc-700 shadow-lg px-2 py-1 w-full mt-2 rounded-lg h-10  "
+                        onClick={mostrarListado}
+                    > Obtener listado Filtrado</button>}
                     </>
                     }
             </div>
