@@ -7,6 +7,7 @@ import Notifications from '../components/screens/Notifications'
 import Perfil from '../components/screens/Perfil'
 import Publicaciones from '../components/screens/Publicaciones'
 import Seguimientos from '../components/screens/Seguimientos'
+import Mensajes from '../components/screens/Mensajes'
 import { useState } from 'react'
 import { useRouter } from "next/router";
 
@@ -35,9 +36,12 @@ export default function Dashboard() {
     case "Perfil":
       componentToRender = <Perfil />;
       break;
-    case "Publicaciones":
-      componentToRender = <Publicaciones />;
-      break;
+      case "Publicaciones":
+        componentToRender = <Publicaciones />;
+        break;
+        case "Mensajes":
+          componentToRender = <Mensajes />;
+          break;
     case "Seguimientos":
       componentToRender = <Seguimientos />;
       break;

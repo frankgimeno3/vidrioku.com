@@ -24,7 +24,7 @@ const Notifications: FC = ({ }) => {
           <div className="  mx-6 pb-3 bg-white bg-opacity-10  text-zinc-100  rounded-lg my-6">
             <h2 className='text-right pr-3 pt-2 text-gray-400 text-sm'>Mensaje</h2>
             <h2 className='mt-1 text-sm mb-2 mx-5'>La empresa
-              <span className='font-bold'> VIDRIOPERFIL </span>te ha enviado un mensaje </h2>
+              <span className='font-bold'> VIDRIOPERFIL </span>le ha enviado un mensaje </h2>
           </div>
 
           <div className="  mx-6 pb-3 bg-white bg-opacity-10  text-zinc-100  rounded-lg my-6">
@@ -40,7 +40,7 @@ const Notifications: FC = ({ }) => {
           <div className="  mx-6 pb-3 bg-white bg-opacity-10  text-zinc-100  rounded-lg my-6">
             <h2 className='text-right pr-3 pt-2 text-gray-400 text-sm'>Mensaje</h2>
                <h2 className='mt-1 text-sm mb-2 mx-5'>El usuario
-               <span className='font-bold'> Alex Gimeno </span>te ha enviado un mensaje </h2>
+               <span className='font-bold'> Alex Gimeno </span>le ha enviado un mensaje </h2>
            </div>
         </div>
       </div>
