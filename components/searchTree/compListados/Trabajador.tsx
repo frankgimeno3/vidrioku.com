@@ -4,13 +4,13 @@ import Image from 'next/image';
 const Trabajador: FC = () => {
   const n1 = Math.floor(Math.random() * 6) + 1;
    return (
-    <div className="flex flex-row shadow-lg mx-auto pt-1 ">
-      <div className="flex flex-col shadow border border-grey-300  bg-white text-black p-2 ">
+    <div className="flex flex-row w-full pt-1 bg-gray-50 ">
+      <div className="flex flex-col bg-gradient-to-r from-gray-100 to-white   text-black w-full px-3 py-2   ">
         <h2 className="text-xs pt-1 text-right  ">Juan Antonio Recio Dominguez</h2>
         <div className="flex flex-col   ml-5 ">
-          <h2 className='text-white bg-slate-600 text-xs my-1 px-2 mr-2 rounded text-right justify-right'>
+          <h2 className='text-gray-600 bg-white shadow text-xs my-1 px-2 ml-6 mr-2 rounded text-right justify-right'>
             Ingeniero Técnico Mecánico  </h2>
-          <h2 className='text-white bg-slate-600 text-xs  1 px-2 mr-2 mb-1 rounded text-right justify-right'>
+          <h2 className='text-gray-600 bg-white shadow text-xs  1 px-2 ml-6 mr-2 mb-1 rounded text-right justify-right'>
             Ingeniero Técnico Industrial </h2>
           <div className='flex flex-row justify-end pr-2'>
             <p className=" text-gray-500 text-xs pr-1">
@@ -28,13 +28,13 @@ const Trabajador: FC = () => {
           </div>
         </div>
       </div>
-      <div className='flex flex-col   '>
+      <div className='flex flex-col bg-white p-3 '>
         <Image
           src={`/profilepictures/${n1}.jpg`}
           alt="ing1"
-          width={100}
+          width={120}
           height={20}
-          className=" shadow-lg  "
+          className=" shadow-lg rounded-full "
         /></div>
     </div>
   );
