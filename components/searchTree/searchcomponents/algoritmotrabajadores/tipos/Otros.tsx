@@ -1,19 +1,45 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 
+interface OtrosProps {
+    setIsTrabajadoresSelected: (component: boolean) => void;
+}
+const Otros: FC <OtrosProps>= ({setIsTrabajadoresSelected}) => {
+    const [segun, setSegun] = useState("")
 
-const Otros: FC = () => {
-
+    const setAdministracion = () => {
+        return setSegun("Administracion")
+    }
+    const setMarketing = () => {
+        return setSegun("Marketing")
+    }
+    const setFinanzas = () => {
+        return setSegun("Finanzas")
+    }
+    const setOtros = () => {
+        return setSegun("Otros")
+    }
 
     return (<>
          <h2 className="pt-12">Encuentre a otros perfiles con experiencia en el sector del vidrio</h2>
-        <div className="px-2 flex flex-col w-full">
-            <div className="flex flex-col  p-2">
-                 <button className="bg-zinc-100 text-zinc-700 shadow-lg p-2 text-xs h-16 my-2">Administración</button>
-                <button className="bg-zinc-100 text-zinc-700 shadow-lg p-2 text-xs h-16 my-2">Márketing</button>
-                <button className="bg-zinc-100 text-zinc-700 shadow-lg p-2 text-xs h-16 my-2">Finanzas</button>
-             </div>
-            
-        </div>
+         <div className="flex flex-row mx-auto">
+                            <div className="flex flex-col flex-1 p-2">
+                                <button className={`${segun == 'Administracion' ? 'bg-zinc-100 text-zinc-700 shadow-lg' : 'bg-zinc-700 text-zinc-100 shadow-lg'
+                                    } p-2 w-full my-1 rounded-lg h-20`}
+                                    onClick={setAdministracion}> Administración</button>
+                                <button className={`${segun == 'Marketing' ? 'bg-zinc-100 text-zinc-700 shadow-lg' : 'bg-zinc-700 text-zinc-100 shadow-lg'
+                                    } p-2 w-full my-1 rounded-lg h-20`}
+                                    onClick={setMarketing}> Márketing</button>
+
+                            </div>
+                            <div className="flex flex-col flex-1 p-2">
+                                <button className={`${segun == 'Finanzas' ? 'bg-zinc-100 text-zinc-700 shadow-lg' : 'bg-zinc-700 text-zinc-100 shadow-lg'
+                                    } p-2 w-full my-1 rounded-lg h-20`}
+                                    onClick={setFinanzas}> Finanzas</button>
+                                <button className={`${segun == 'Otros' ? 'bg-zinc-100 text-zinc-700 shadow-lg' : 'bg-zinc-700 text-zinc-100 shadow-lg'
+                                    } p-2 w-full my-1 rounded-lg h-20`}
+                                    onClick={setOtros}> Otros</button>
+                            </div>
+                        </div>
     </>
     );
 };
