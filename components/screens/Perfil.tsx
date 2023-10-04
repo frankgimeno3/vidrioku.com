@@ -22,7 +22,7 @@ const Perfil: FC = ({ }) => {
           <h2 className='mt-2 text-md text-center px-8 pt-5 '>Frank Gimeno Ruiz</h2>
           <div className='flex flex-row mt-5'>
             <Image
-              src="/profilepictures/ingeniero2.jpg"
+              src="/profilepictures/3.jpg"
               alt="ing2"
               width={140}
               height={20}

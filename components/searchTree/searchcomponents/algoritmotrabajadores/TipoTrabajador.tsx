@@ -62,7 +62,7 @@ const TipoTrabajador: FC<TipoTrabajadorProps> = ({ setIsTrabajadoresSelected }) 
                 </div>
             </div>
             {tipoTrabajador == "Compras" && <Compras setIsTrabajadoresSelected={setIsTrabajadoresSelected} />}
-            {tipoTrabajador == "Comercial" && <Comercial />}
+            {tipoTrabajador == "Comercial" && <Comercial setIsTrabajadoresSelected={setIsTrabajadoresSelected}  />}
             {tipoTrabajador == "Dtecnico" && <Dtecnico />}
             {tipoTrabajador == "Ingenieros" && <Ingenieros setIsTrabajadoresSelected={setIsTrabajadoresSelected}/>}
             {tipoTrabajador == "Operarios" && <Operarios />}

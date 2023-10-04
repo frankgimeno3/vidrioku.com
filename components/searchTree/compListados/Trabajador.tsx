@@ -2,20 +2,22 @@ import { FC } from 'react';
 import Image from 'next/image';
 
 const Trabajador: FC = () => {
-  return (
-    <div className="flex flex-row shadow-lg mx-3 py-2 ">
-      <div className="flex flex-col shadow border border-grey-300  bg-white text-black ">
-        <h2 className="text-sm pt-1 text-right pr-3">Juan Antonio Recio Dominguez</h2>
-        <div className="flex flex-col mt-1 ml-5 ">
-          <h2 className='text-white bg-slate-600 text-xs my-1 px-2 mr-3 rounded text-right justify-right'>
+  const n1 = Math.floor(Math.random() * 6) + 1;
+   return (
+    <div className="flex flex-row shadow-lg mx-auto pt-1 ">
+      <div className="flex flex-col shadow border border-grey-300  bg-white text-black p-2 ">
+        <h2 className="text-xs pt-1 text-right  ">Juan Antonio Recio Dominguez</h2>
+        <div className="flex flex-col   ml-5 ">
+          <h2 className='text-white bg-slate-600 text-xs my-1 px-2 mr-2 rounded text-right justify-right'>
             Ingeniero Técnico Mecánico  </h2>
-          <h2 className='text-white bg-slate-600 text-xs mt-1 px-2 mr-3 mb-2 rounded text-right justify-right'>
+          <h2 className='text-white bg-slate-600 text-xs  1 px-2 mr-2 mb-1 rounded text-right justify-right'>
             Ingeniero Técnico Industrial </h2>
-          <div className='flex flex-row justify-end pr-3'>
-            <p className=" text-gray-500 text-sm pr-1">
+          <div className='flex flex-row justify-end pr-2'>
+            <p className=" text-gray-500 text-xs pr-1">
               Cuenca, España
             </p>
-            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" className='w-5'
+            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" 
+            className='w-3'
               enable-background="new 0 0 64 64" xmlSpace="preserve" fill="#000000">
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
               <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -28,9 +30,9 @@ const Trabajador: FC = () => {
       </div>
       <div className='flex flex-col   '>
         <Image
-          src="/profilepictures/ingeniero1.jpg"
+          src={`/profilepictures/${n1}.jpg`}
           alt="ing1"
-          width={140}
+          width={100}
           height={20}
           className=" shadow-lg  "
         /></div>

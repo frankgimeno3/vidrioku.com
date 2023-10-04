@@ -19,7 +19,7 @@ const Mensajes: FC = ({ }) => {
   const selectUser1 = () => {
     setIsConversation(true)
     setUserSelectedName("Miquel Àngel Rodriguez")
-    setUserSelectedImg("/profilepictures/ingeniero1.jpg")
+    setUserSelectedImg("/profilepictures/3.jpg")
   }
   const selectUser2 = () => {
     setIsConversation(true)
@@ -29,7 +29,7 @@ const Mensajes: FC = ({ }) => {
   const selectUser3 = () => {
     setIsConversation(true)
     setUserSelectedName("Pepito Ramos")
-    setUserSelectedImg("/profilepictures/ingeniero2.jpg")
+    setUserSelectedImg("/profilepictures/4.jpg")
   }
   const selectUser4 = () => {
     setIsConversation(true)
@@ -55,7 +55,7 @@ const Mensajes: FC = ({ }) => {
           <div className="flex  flex-row  mx-6 pb-3 bg-white bg-opacity-10  text-zinc-100  rounded-lg my-1"
             onClick={selectUser1}>
             <Image
-              src="/profilepictures/ingeniero1.jpg"
+              src="/profilepictures/2.jpg"
               alt="ing1"
               width={100}
               height={50}
@@ -91,7 +91,7 @@ const Mensajes: FC = ({ }) => {
             onClick={selectUser3}>
 
             <Image
-              src="/profilepictures/ingeniero2.jpg"
+              src="/profilepictures/3.jpg"
               alt="ing2"
               width={100}
               height={50}
