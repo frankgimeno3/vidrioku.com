@@ -21,7 +21,7 @@ const Otros: FC <OtrosProps>= ({setIsTrabajadoresSelected}) => {
 
     return (<>
          <h2 className="pt-12">Encuentre a otros perfiles con experiencia en el sector del vidrio</h2>
-         <div className="flex flex-row mx-auto">
+         <div className="flex flex-row mx-auto text-xs  ">
                             <div className="flex flex-col flex-1 p-2">
                                 <button className={`${segun == 'Administracion' ? 'bg-zinc-100 text-zinc-700 shadow-lg' : 'bg-zinc-700 text-zinc-100 shadow-lg'
                                     } p-2 w-full my-1 rounded-lg h-20`}
