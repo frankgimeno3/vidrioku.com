@@ -19,10 +19,8 @@ const Notifications: FC = ({ }) => {
       <h2 className="bg-zinc-800  bg-white bg-opacity-50 font-bold text-lg  py-3 text-center">Notificaciones</h2>
       <div className='flex flex-col '>
         <div className="  mx-6  bg-white bg-opacity-5  text-zinc-100  rounded-lg my-6 mt-6">
-          <div className='px-8 pt-5 '>
-            <h2 className='mt-2 text-md text-center  '>Tienes <span className='font-bold'>4</span> notificaciones nuevas</h2>
-          </div>
-
+             <h2 className='mt-2 text-md text-center px-8 pt-5'>Tienes <span className='font-bold'>4</span> notificaciones nuevas</h2>
+ 
           <div className="  mx-6 pb-3 bg-white bg-opacity-10  text-zinc-100  rounded-lg my-6">
             <h2 className='text-right pr-3 pt-2 text-gray-400 text-sm'>Mensaje</h2>
             <h2 className='mt-1 text-sm mb-2 mx-5'>La empresa
