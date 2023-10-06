@@ -3,9 +3,10 @@ import { useRouter } from "next/router";
 // import { useFirebaseApp } from 'reactfire';
 import { createUserWithEmailAndPassword } from 'firebase/auth';   
 import {auth} from '../firebase.js'
+// import { showmessage } from "../components/showmessage.js";
 
 
-export default function Login() {
+export default function Signup() {
     // const firebaseApp = useFirebaseApp();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -20,17 +21,26 @@ export default function Login() {
         setPassword(event.target.value);
     };
 
-    const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSignup = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password)
             console.log(userCredential)
         } catch (error: any) {
-            console.error("Error al iniciar sesión:", error.message);
-            console.error("Error al iniciar sesión:", error.code);
-
-            if (error.code === 'auth/invalid-email')
-        }
+            if (error.code === 'auth/email-already-in-use') {
+                // showmessage("Email already in use", "error")
+                alert("Email already in use")
+              } else if (error.code === 'auth/invalid-email') {
+                // showmessage("Invalid email", "error")
+                alert("Invalid email")
+              } else if (error.code === 'auth/weak-password') {
+                // showmessage("Weak password", "error")
+                alert("Weak password")
+              } else if (error.code) {
+                // showmessage("Something went wrong", "error")
+                alert("Something went wrong")
+              }
+            }
     };
 
     return (
@@ -39,11 +49,11 @@ export default function Login() {
             <div className="h-screen flex flex-col justify-center items-center relative">
                 <div className="mt-24 w-full py-16 z-10 text-gray-800">
                     <h1 className="w-full text-center font-bold text-4xl text-white">
-                        INICIAR SESIÓN
+                        REGISTRO
                     </h1>
  
                     <div className="md:mx-24 md:px-24 mt-5">
-                        <form className="md:mx-24 text-center md:px-24 py-5" onSubmit={handleLogin}>
+                        <form className="md:mx-24 text-center md:px-24 py-5" onSubmit={handleSignup}>
                             <div className="mb-4 mx-16">
                                 <input
                                     type="email"
@@ -70,7 +80,7 @@ export default function Login() {
                                 type="submit"
                                 className="bg-yellow-500 text-black rounded-lg shadow-lg px-5 py-3 lg:font-bold mx-5 text-sm"
                             >
-                                INICIAR SESIÓN
+                                REGISTRARSE
                             </button>
                         </form>
                     </div>
