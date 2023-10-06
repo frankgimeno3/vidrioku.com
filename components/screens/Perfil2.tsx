@@ -2,13 +2,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
-// interface NavbarProps {
-//   currentComponent: string;
-//   setCurrentComponent: (component: string) => void;
-// }
-
-// const Navbar: FC<NavbarProps> = ({ currentComponent, setCurrentComponent }) => {
-
+ 
 const Perfil: FC = ({ }) => {
   const router = useRouter();
 

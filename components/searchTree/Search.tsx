@@ -4,11 +4,14 @@ import TipoOferta from './searchcomponents/algoritmofertas/TipoOferta'
 import TipoTrabajador from './searchcomponents/algoritmotrabajadores/TipoTrabajador'
 import ListadoTrabajadores from './bolsaTrabajadores/listadoTrabajadores';
 import ListadoOfertas from './bolsaOfertas/listadoOfertas'
+import Perfil from '../screens/Perfil2';
+
 const Search: FC = () => {
   const router = useRouter();
   const [tipoConsulta, setTipoConsulta] = useState('');
   const [isOfertasSelected, setIsOfertasSelected] = useState(false);
   const [isTrabajadoresSelected, setIsTrabajadoresSelected] = useState(false);
+  const [isPerfil, setIsPerfil] =   useState(false);
 
   const setOfertas = () => {
     setTipoConsulta('Ofertas');
@@ -56,6 +59,7 @@ const Search: FC = () => {
       {isOfertasSelected && <ListadoOfertas />}
       {isTrabajadoresSelected && <ListadoTrabajadores />}
       </div>
+      {/* {<Perfil/>} gestionar el click i el perfil */}
 
     </>
 
