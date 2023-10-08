@@ -1,5 +1,9 @@
 import { init } from 'next-firebase-auth'
 
+
+// https://www.youtube.com/watch?v=8qUFkX-8gAE
+
+
 const initAuth = () => {
   init({
     authPageURL: '/auth',
