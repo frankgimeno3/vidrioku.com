@@ -10,6 +10,8 @@ import Seguimientos from '../components/screens/Seguimientos'
 import Mensajes from '../components/screens/Mensajes'
 import { useState } from 'react'
 import { useRouter } from "next/router";
+import { signOut } from 'firebase/auth';
+import { auth } from '../firebase';
 
 export default function Dashboard() {
   const [currentComponent, setCurrentComponent] = useState("Home")
@@ -36,17 +38,17 @@ export default function Dashboard() {
     case "Perfil":
       componentToRender = <Perfil />;
       break;
-      case "Publicaciones":
-        componentToRender = <Publicaciones />;
-        break;
-        case "Mensajes":
-          componentToRender = <Mensajes />;
-          break;
+    case "Publicaciones":
+      componentToRender = <Publicaciones />;
+      break;
+    case "Mensajes":
+      componentToRender = <Mensajes />;
+      break;
     case "Seguimientos":
       componentToRender = <Seguimientos />;
       break;
     default:
-      componentToRender = <Home />;  
+      componentToRender = <Home />;
       break;
   }
   const handlePerfilClick = () => {
@@ -68,39 +70,50 @@ export default function Dashboard() {
     setCurrentComponent("Seguimientos")
     setIsMenuOpen(false)
   };
-  const handleCerrarSesion = () => {
-    router.push('/');
-    setIsMenuOpen(false)
+  const handleCerrarSesion = async () => {
+
+    try {
+      await signOut(auth)
+      console.log("tamo fuera", auth)
+      setTimeout(function () {
+        router.push('/');
+        setIsMenuOpen(false)
+        console.log(auth)
+      }, 500);
+
+    } catch (error) {
+      console.log(error)
+    }
   };
   return (
     <main className='h-screen bg-zinc-500 '>
-        <Navbar currentComponent={currentComponent} setCurrentComponent={setCurrentComponent}
-          isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      <Navbar currentComponent={currentComponent} setCurrentComponent={setCurrentComponent}
+        isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       {componentToRender}
       <Footer onPageChange={handlePageChange} />
-      <div className={isMenuOpen ? 
-          'fixed top-0 right-0 flex flex-col text-gray-800 z-50 bg-zinc-800  mt-20 ' : 'hidden'}>
-          <ul className='flex flex-col text-md text-gray-100 w-screen '>
-            <button  className='py-2 hover:bg-zinc-500' onClick={handlePerfilClick}>
-              Perfil
-            </button>
-            <button className='py-2 hover:bg-zinc-500' onClick={handleMensajesClick}>
-              Mensajes
-            </button>
-            <button className='py-2 hover:bg-zinc-500' onClick={handlePublicacionesClick}>
-              Publicaciones
-            </button>
-            <button className='py-2 hover:bg-zinc-500' onClick={handleSeguimientosClick}>
-              Seguimientos
-            </button>
-            <button className='py-2 hover:bg-zinc-500'  >
-              Configuración
-            </button>
-            <button className='py-2 hover:bg-zinc-500' onClick={handleCerrarSesion}>
-              Cerrar sesión
-            </button>
-          </ul>
-        </div>
+      <div className={isMenuOpen ?
+        'fixed top-0 right-0 flex flex-col text-gray-800 z-50 bg-zinc-800  mt-20 ' : 'hidden'}>
+        <ul className='flex flex-col text-md text-gray-100 w-screen '>
+          <button className='py-2 hover:bg-zinc-500' onClick={handlePerfilClick}>
+            Perfil
+          </button>
+          <button className='py-2 hover:bg-zinc-500' onClick={handleMensajesClick}>
+            Mensajes
+          </button>
+          <button className='py-2 hover:bg-zinc-500' onClick={handlePublicacionesClick}>
+            Publicaciones
+          </button>
+          <button className='py-2 hover:bg-zinc-500' onClick={handleSeguimientosClick}>
+            Seguimientos
+          </button>
+          <button className='py-2 hover:bg-zinc-500'  >
+            Configuración
+          </button>
+          <button className='py-2 hover:bg-zinc-500' onClick={handleCerrarSesion}>
+            Cerrar sesión
+          </button>
+        </ul>
+      </div>
     </main>
   )
 }
