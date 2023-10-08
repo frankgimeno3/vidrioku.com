@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from "../firebase.js";
+import { useRouter } from 'next/router';
+
+
 
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [errorMessage, setErrorMessage] = useState(""); // Agregamos un estado para el mensaje de error
+    const [errorMessage, setErrorMessage] = useState("");  
+    const router = useRouter()
 
     const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(event.target.value);
-    };
+    }
 
     const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setPassword(event.target.value);
@@ -21,6 +25,10 @@ export default function Login() {
             const userCredentials = await signInWithEmailAndPassword(auth, email, password);
             console.log(userCredentials);
             alert("Welcome " + userCredentials.user.email);
+            setTimeout(function() {
+                router.push('/dashboard');
+             }, 500);
+
         } catch (error) {
             if (error === 'auth/wrong-password') {
                 setErrorMessage("Contraseña incorrecta");

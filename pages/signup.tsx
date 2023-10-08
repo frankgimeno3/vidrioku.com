@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import { useRouter } from "next/router";
-// import { useFirebaseApp } from 'reactfire';
+ // import { useFirebaseApp } from 'reactfire';
 import { createUserWithEmailAndPassword } from 'firebase/auth';   
 import {auth} from '../firebase.js'
 // import { showmessage } from "../components/showmessage.js";
+import { useRouter } from 'next/router';
 
 
 export default function Signup() {
     // const firebaseApp = useFirebaseApp();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const router = useRouter();
 
 
 
