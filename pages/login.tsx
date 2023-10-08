@@ -22,7 +22,6 @@ export default function Login() {
             console.log(userCredentials);
             alert("Welcome " + userCredentials.user.email);
         } catch (error) {
-            console.log(error)
             if (error === 'auth/wrong-password') {
                 setErrorMessage("Contraseña incorrecta");
             } else if (error === 'auth/user-not-found') {
@@ -30,6 +29,7 @@ export default function Login() {
             } else {
                 setErrorMessage("Algo salió mal");
             }
+            console.log(error)
         }
     };
 
