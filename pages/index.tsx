@@ -17,10 +17,12 @@ export default function Home() {
      <>
      <NavUnlogged currentComponent={currentComponent} setCurrentComponent={setCurrentComponent}/>
      <div className='bg-gray-50 mx-24 h-screen text-black'>
-      {}
-        <Hero />
+      {currentComponent==="Hero" && <>
+             <Hero />
         <Bolsas />
         <Contactenos />
+      </>}
+ 
      </div>
      </>
   )
