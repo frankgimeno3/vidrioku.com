@@ -2,9 +2,9 @@ import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head';
 import {Montserrat} from 'next/font/google'
-import initAuth from './initAuth'
+// import initAuth from './initAuth'
 
-initAuth()
+// initAuth()
 
 const lora = Montserrat({
   subsets: ["latin"],  
